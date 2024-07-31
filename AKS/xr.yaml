@@ -1,0 +1,7 @@
+apiVersion: azure.platform.io/v1alpha1
+kind: xCluster
+metadata:
+  name: aks-cluster
+spec: 
+  instance_type: "Standard_DS3_v2"
+  count: 1
