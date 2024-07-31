@@ -1,0 +1,30 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata: 
+  name: xclusters.azure.platform.io
+spec:
+  group: azure.platform.io
+  names:
+    kind: xCluster
+    plural: xclusters
+  versions:
+  - name: v1alpha1
+    served: true
+    referenceable: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            properties:
+              instance_type:
+                type: string
+              count:
+                type: integer
+                description: Desired node count, from 1 to 100.
+                default: 2
+  claimNames:
+    kind: xClusterClaim
+    plural: xclusterclaims
+
