@@ -5,3 +5,4 @@ metadata:
 spec:
   instance_type: "Standard_DS3_v2"
   count: 1
+  location: "East US"

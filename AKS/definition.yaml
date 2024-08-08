@@ -24,6 +24,8 @@ spec:
                 type: integer
                 description: Desired node count, from 1 to 100.
                 default: 2
+              location:
+                type: string
   claimNames:
     kind: xClusterClaim
     plural: xclusterclaims
